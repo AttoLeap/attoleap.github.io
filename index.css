@@ -11,7 +11,7 @@
   gap: 1em;
   justify-content: space-around;
   place-items: center;
-  background-color: #050505;
+  background-color: #F4FAFF;
 }
 
 .branding {
@@ -19,7 +19,7 @@
 }
 
 .branding > h1 {
-  color: #F4FAFF;
+  color: #050505;
   font-family: 'Jost', sans-serif;
   font-weight: 800;
   font-size: 5em;
@@ -30,5 +30,19 @@
   font-family: 'Jost', sans-serif;
   font-size: 1.5em;
   font-weight: 300;
-  color: #F4FAFFAC;
+  color: #050505AC;
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: #050505;
+  }
+
+  .branding > h1 {
+    color: #F4FAFF;
+  }
+
+  .branding > p {
+    color: #F4FAFFAC;
+  }
 }
