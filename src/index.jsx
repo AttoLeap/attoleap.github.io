@@ -1,5 +1,7 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
+import '@fontsource-variable/lexend';
+import '@fontsource-variable/dm-sans';
 
 import './index.css';
 import App from './App';
