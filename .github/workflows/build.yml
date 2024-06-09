@@ -1,6 +1,7 @@
 on:
-    - push
-    - pull_request
+    push:
+      branches:
+        - master
   
 jobs:
     build-and-deploy:
@@ -9,6 +10,7 @@ jobs:
       permissions:
         contents: read
         deployments: write
+        pages: write
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
@@ -39,16 +41,8 @@ jobs:
           run: pnpm run lint
         - name: Build Website
           run: pnpm run build
-        - name: Install Wrangler
-          run: |
-            npm install -g wrangler@3
-        - name: Publish to Cloudflare Pages
-          uses: cloudflare/pages-action@v1
+        - name: Deploy to GH Pages 🚀
+          uses: peaceiris/actions-gh-pages@v3
           with:
-            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-            accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-            projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
-            directory: dist
-            gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-            wranglerVersion: '3'
-            branch: ${{ github.ref_name }}
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: dist
