@@ -11,7 +11,7 @@
   gap: 1em;
   justify-content: space-around;
   place-items: center;
-  background-color: #F4FAFF;
+  background-color: #f9fffa;
 }
 
 .branding {
@@ -19,30 +19,29 @@
 }
 
 .branding > h1 {
-  color: #050505;
-  font-family: 'Jost', sans-serif;
+  color: #0b1913;
+  font-family: 'Lexend', sans-serif;
   font-weight: 800;
   font-size: 5em;
-  letter-spacing: -0.024em;
 }
 
 .branding > p {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 1.5em;
   font-weight: 300;
-  color: #050505AC;
+  color: #0b1913AC;
 }
 
 @media (prefers-color-scheme: dark) {
   .container {
-    background: #050505;
+    background: #0b1913;
   }
 
   .branding > h1 {
-    color: #F4FAFF;
+    color: #f9fffa;
   }
 
   .branding > p {
-    color: #F4FAFFAC;
+    color: #f9fffaAC;
   }
 }
