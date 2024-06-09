@@ -7,12 +7,23 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.+(js|ts|jsx|tsx|json|css|md)\""
   },
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "devDependencies": {
+    "@typescript-eslint/parser": "^7.12.0",
     "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-solid": "^0.14.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "postcss": "^8.4.38",
+    "prettier": "^3.3.1",
     "solid-devtools": "^0.29.3",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5",
@@ -23,5 +34,45 @@
     "@fontsource-variable/dm-sans": "^5.0.6",
     "@fontsource-variable/lexend": "^5.0.20",
     "solid-js": "^1.8.17"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "jsx-a11y",
+      "prettier",
+      "solid"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:solid/typescript",
+      "plugin:prettier/recommended",
+      "plugin:jsx-a11y/recommended"
+    ]
+  },
+  "eslintIgnore": [
+    "dist",
+    "dist.*",
+    "node_modules"
+  ],
+  "prettier": {
+    "printWidth": 90,
+    "bracketSpacing": false,
+    "trailingComma": "es5",
+    "singleQuote": false
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|ts|jsx|tsx)": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

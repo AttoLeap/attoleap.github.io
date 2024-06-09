@@ -1,7 +1,7 @@
-import { JSX } from 'solid-js/jsx-runtime';
-import logo from './assets/logo.svg';
-import Banner from './components/Banner';
-import Navbar from './components/Navbar';
+import {JSX} from "solid-js/jsx-runtime";
+import logo from "./assets/logo.svg";
+import Banner from "./components/Banner";
+import Navbar from "./components/Navbar";
 
 function App(): JSX.Element {
   return (
