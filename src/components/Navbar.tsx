@@ -1,4 +1,11 @@
-function Navbar(props) {
+import { JSX } from "solid-js";
+
+type NavbarProps = {
+    name: string,
+    logo: string
+}
+
+function Navbar(props: NavbarProps): JSX.Element {
     return (
         <nav class="h-18 px-16 py-4 flex justify-between place-items-center font-brand">
             <div class="flex flex-row place-items-center gap-1">

@@ -1,4 +1,11 @@
-export default function Banner(props) {
+import { JSX } from "solid-js/jsx-runtime"
+
+type BannerProps = {
+    headline: string,
+    tagline: string
+}
+
+export default function Banner(props: BannerProps): JSX.Element {
     return (
         <div class="w-screen h-[calc(100vh_-_72px)] grid grid-rows-1 grid-cols-5 place-items-center p-4 md:p-8 lg:p-12">
             <div class="col-start-2 col-end-5 font-brand flex flex-col gap-8">

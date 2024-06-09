@@ -1,6 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
+import { Config } from 'tailwindcss/types/config';
 
-/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -34,5 +34,5 @@ export default {
     },
   },
   plugins: [],
-}
+} satisfies Config
 
