@@ -1,21 +1,22 @@
-import { defineConfig, presetAttributify, presetUno, presetWebFonts } from "unocss";
+import { defineConfig, presetAttributify, presetUno, presetWebFonts, transformerCompileClass, transformerDirectives } from "unocss";
+import presetAutoprefixer from 'unocss-preset-autoprefixer';
 
 export default defineConfig({
   presets: [
-    presetAttributify({}),
     presetUno(),
+    presetAttributify(),
     presetWebFonts({
-      provider: "bunny",
+      provider: "google",
       fonts: {
-        sans: {
-          name: "Satoshi",
-          provider: "fontshare"
-        },
-        mono: ["FiraCode", "FiraMono"],
-        brand: {
-          name: "Overpass"
-        }
+        sans: "Urbanist",
+        mono: "JetBrains Mono",
+        brand: "Urbanist"
       }
-    })
+    }),
+    presetAutoprefixer()
+  ],
+  transformers: [
+    transformerCompileClass(),
+    transformerDirectives()
   ]
 });
