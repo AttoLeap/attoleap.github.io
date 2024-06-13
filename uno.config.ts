@@ -1,10 +1,9 @@
-import { defineConfig, presetAttributify, presetUno, presetWebFonts, transformerCompileClass, transformerDirectives } from "unocss";
+import { defineConfig, presetUno, presetWebFonts, transformerCompileClass, transformerDirectives } from "unocss";
 import presetAutoprefixer from 'unocss-preset-autoprefixer';
 
 export default defineConfig({
   presets: [
     presetUno(),
-    presetAttributify(),
     presetWebFonts({
       provider: "google",
       fonts: {
@@ -15,8 +14,8 @@ export default defineConfig({
     }),
     presetAutoprefixer()
   ],
-  transformers: [
-    transformerCompileClass(),
-    transformerDirectives()
+  transformers: [,
+    transformerDirectives(),
+    transformerCompileClass()
   ]
 });
