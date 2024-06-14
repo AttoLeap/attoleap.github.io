@@ -9,7 +9,7 @@ export default function NotFound() {
         <h1 my="16" text="size-6xl gray-100" font="thin" uppercase>
           Not Found
         </h1>
-        <p class="font-mono mt-2">Oops! Looks like you got lost in here</p>
+        <p class="mt-2 font-mono">Oops! Looks like you got lost in here</p>
         <p class="my-4">
           <A href="/" class="text-orange-400 hover:underline">
             Home
