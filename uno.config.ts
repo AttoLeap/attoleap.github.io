@@ -1,5 +1,11 @@
-import { defineConfig, presetUno, presetWebFonts, transformerCompileClass, transformerDirectives } from "unocss";
-import presetAutoprefixer from 'unocss-preset-autoprefixer';
+import {
+  defineConfig,
+  presetUno,
+  presetWebFonts,
+  transformerCompileClass,
+  transformerDirectives
+} from "unocss";
+import presetAutoprefixer from "unocss-preset-autoprefixer";
 
 export default defineConfig({
   presets: [
@@ -14,8 +20,5 @@ export default defineConfig({
     }),
     presetAutoprefixer()
   ],
-  transformers: [
-    transformerDirectives(),
-    transformerCompileClass()
-  ]
+  transformers: [transformerDirectives(), transformerCompileClass()]
 });

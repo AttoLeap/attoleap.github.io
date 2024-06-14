@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    environment: Cloudflare Pages
+    permissions:
+      contents: write
+      deployments: write
+      pages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⚙️ Checkout
+        uses: actions/checkout@v4
+      - name: 🥖 Install Bun
+        uses: oven-sh/setup-bun@v1
+      - name: ⬇️ Install dependencies
+        run: bun install
+      - name: ✔️ Run Lint
+        run: bun run lint
+      - name: 🏗️ Build Website
+        run: bun run build
+      - name: 🚀 Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .output/public
+          cname: attoleap.com
