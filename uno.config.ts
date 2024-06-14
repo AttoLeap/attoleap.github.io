@@ -1,15 +1,16 @@
 import {
   defineConfig,
+  presetAttributify,
   presetUno,
   presetWebFonts,
-  transformerCompileClass,
+  transformerAttributifyJsx,
   transformerDirectives
 } from "unocss";
-import presetAutoprefixer from "unocss-preset-autoprefixer";
 
 export default defineConfig({
   presets: [
     presetUno(),
+    presetAttributify(),
     presetWebFonts({
       provider: "google",
       fonts: {
@@ -17,8 +18,7 @@ export default defineConfig({
         mono: "JetBrains Mono",
         brand: "Urbanist"
       }
-    }),
-    presetAutoprefixer()
+    })
   ],
-  transformers: [transformerDirectives(), transformerCompileClass()]
+  transformers: [transformerDirectives(), transformerAttributifyJsx()]
 });
