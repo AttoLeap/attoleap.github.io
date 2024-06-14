@@ -14,7 +14,7 @@ export default defineConfig({
     }),
     presetAutoprefixer()
   ],
-  transformers: [,
+  transformers: [
     transformerDirectives(),
     transformerCompileClass()
   ]

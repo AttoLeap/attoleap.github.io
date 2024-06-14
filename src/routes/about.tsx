@@ -3,9 +3,7 @@ import { MetaProvider, Title } from "@solidjs/meta";
 export default function About() {
   return (
     <>
-      <MetaProvider>
-        <Title>AttoLeap | About Us</Title>
-      </MetaProvider>
+      <Title>AttoLeap | About Us</Title>
       <main class=":uno: h-[calc(100vh_-_72px)] bg-black grid place-items-center font-sans text-center px-[10%] md:px-[20%] text-gray-700 p-4">
         <h1 class=":uno: font-bold tracking-wider text-3xl text-color-gray-100">
           AttoLeap is a tech startup dedicated to providing innovative solutions for valuable

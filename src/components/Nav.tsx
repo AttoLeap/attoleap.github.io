@@ -1,5 +1,5 @@
 import { useLocation } from "@solidjs/router";
-import logo from "../assets/logo_white.svg";
+import logo from "../assets/dark-logo.svg";
 
 export default function Nav() {
   const location = useLocation();
