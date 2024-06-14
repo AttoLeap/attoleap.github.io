@@ -1,0 +1,1 @@
+import{b as e,i as t,t as a,T as n}from"./index-BM6vt2eu.js";var o=a("<main class=uno-35y9jh><h1 class=uno-x5g6ht>Leaping Beyond Boundaries");function i(){return[e(n,{children:"AttoLeap | Leaping Beyond Boundaries"}),t(o)]}export{i as default};
