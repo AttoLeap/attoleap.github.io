@@ -15,12 +15,15 @@ export default defineConfig({
     presetWebFonts({
       provider: "google",
       fonts: {
-        sans: "Urbanist",
+        sans: "Public Sans",
         mono: "JetBrains Mono",
         brand: "Urbanist"
       }
     }),
-    presetIcons()
+    presetIcons({
+      scale: 1.2,
+      cdn: "https://esm.sh/"
+    })
   ],
   transformers: [transformerDirectives(), transformerAttributifyJsx()]
 });
