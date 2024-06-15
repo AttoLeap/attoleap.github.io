@@ -24,6 +24,7 @@
     "node": ">=18"
   },
   "devDependencies": {
+    "@iconify-json/lucide": "^1.1.192",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
     "@unocss/eslint-config": "^0.60.4",

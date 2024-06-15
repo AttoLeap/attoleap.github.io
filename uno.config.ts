@@ -1,6 +1,7 @@
 import {
   defineConfig,
   presetAttributify,
+  presetIcons,
   presetUno,
   presetWebFonts,
   transformerAttributifyJsx,
@@ -18,7 +19,8 @@ export default defineConfig({
         mono: "JetBrains Mono",
         brand: "Urbanist"
       }
-    })
+    }),
+    presetIcons()
   ],
   transformers: [transformerDirectives(), transformerAttributifyJsx()]
 });
