@@ -6,7 +6,7 @@ export default function Home() {
       <Title>AttoLeap | Leaping Beyond Boundaries</Title>
       <main
         h="[calc(100vh_-_72px)]"
-        bg="black"
+        bg="white dark:black"
         grid
         my="auto"
         place="items-center"
@@ -14,12 +14,11 @@ export default function Home() {
         text="center"
       >
         <h1
-          font="700"
-          text="size-4xl color-gray-100"
-          line-height-relaxed
-          tracking-wider
+          font="800"
+          class="dark:color-gray-100"
+          text="size-4xl color-gray-900 dark:color-gray-100"
           md:w="50vw"
-          md:text="size-7xl"
+          md:text="size-4xl"
           md:line-height="6rem"
         >
           Leaping Beyond Boundaries

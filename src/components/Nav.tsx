@@ -1,11 +1,14 @@
 import { A, useLocation } from "@solidjs/router";
 import { createSignal } from "solid-js";
-import logo from "~/assets/dark-logo.svg";
+import lightLogo from "~/assets/light-logo.svg";
+import darkLogo from "~/assets/dark-logo.svg";
 
 function NavLinks(props: { isColumn?: boolean }) {
   const location = useLocation();
   const active = (path: string) =>
-    path === location.pathname ? "text-color-gray-100" : "text-color-gray-400";
+    path === location.pathname
+      ? "text-color-gray-900 dark:text-color-gray-100"
+      : "text-color-gray-600 dark:text-color-gray-400";
 
   return (
     <ul flex={`~ ${props.isColumn ? "col" : "row"}`} gap-4>
@@ -25,12 +28,35 @@ export default function Nav() {
 
   return (
     <>
-      <nav flex="~ row" h="72px" w="full" place="items-center" justify="between" bg="black" p="4">
-        <div flex="~ flex-row" place="items-center" gap="4">
+      <nav
+        flex="~ row"
+        h="72px"
+        w="full"
+        place="items-center"
+        justify="between"
+        bg="white dark:black"
+        p="4"
+      >
+        <div flex="~ row" place="items-center" gap="4">
           <A href="/">
-            <img w="32px" h="32px" src={logo} alt="Attoleap's white logo" />
+            <img
+              w="32px"
+              h="32px"
+              src={lightLogo}
+              hidden
+              light="inline-block"
+              alt="Attoleap's white logo"
+            />
+            <img
+              w="32px"
+              h="32px"
+              src={darkLogo}
+              hidden
+              dark="inline-block"
+              alt="Attoleap's white logo"
+            />
           </A>
-          <h1 font="brand 900" text="size-28px white" tracking-wide>
+          <h1 font="brand 900" text="size-28px black dark:white" tracking-wide>
             attoleap
           </h1>
         </div>
@@ -40,7 +66,7 @@ export default function Nav() {
         <span
           md="hidden"
           class={menuOpen() ? "i-lucide-x" : "i-lucide-menu"}
-          text="color-white size-3xl"
+          text="size-3xl color-black dark:color-white"
           transition="~ duration-200 ease-in-out"
           onClick={toggleMenu}
         />
@@ -48,7 +74,7 @@ export default function Nav() {
       <div
         class={menuOpen() ? "flex md:hidden" : "hidden"}
         absolute
-        bg="black"
+        bg="white dark:black"
         font="600"
         text="size-3xl"
         p="16"
