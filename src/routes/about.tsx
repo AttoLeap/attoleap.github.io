@@ -5,7 +5,7 @@ export default function About() {
     <>
       <Title>AttoLeap | About Us</Title>
       <main
-        h="[calc(100vh_-_72px)]"
+        min-h="[calc(100vh_-_72px)]"
         bg="white dark:black"
         grid
         place="items-center"
