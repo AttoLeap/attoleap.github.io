@@ -22,7 +22,7 @@
     ]
   },
   "src/routes/about.tsx?pick=default&pick=$css": {
-    "file": "assets/about-C7M204wd.js",
+    "file": "assets/about-DRgf7imo.js",
     "name": "about",
     "src": "src/routes/about.tsx?pick=default&pick=$css",
     "isEntry": true,
@@ -32,7 +32,7 @@
     ]
   },
   "src/routes/index.tsx?pick=default&pick=$css": {
-    "file": "assets/index-BW5sFKB9.js",
+    "file": "assets/index-D3922Ihi.js",
     "name": "index",
     "src": "src/routes/index.tsx?pick=default&pick=$css",
     "isEntry": true,
@@ -42,7 +42,7 @@
     ]
   },
   "virtual:#vinxi/handler/client": {
-    "file": "assets/client-B7vl2OWk.js",
+    "file": "assets/client-CLy9IXLa.js",
     "name": "client",
     "src": "virtual:#vinxi/handler/client",
     "isEntry": true,
@@ -56,7 +56,7 @@
       "src/routes/index.tsx?pick=default&pick=$css"
     ],
     "css": [
-      "assets/client-TkE1sSRr.css"
+      "assets/client-DDiQcPk1.css"
     ]
   }
 }
