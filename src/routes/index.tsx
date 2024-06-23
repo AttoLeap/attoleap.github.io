@@ -16,7 +16,7 @@ export default function Home() {
         <h1
           font="800"
           class="dark:color-gray-100"
-          text="size-4xl color-gray-900 dark:color-gray-100"
+          text="size-2xl color-gray-900 dark:color-gray-100"
           md:w="50vw"
           md:text="size-4xl"
           md:line-height="6rem"
