@@ -42,7 +42,7 @@
     ]
   },
   "virtual:#vinxi/handler/client": {
-    "file": "assets/client-DX6UdBeX.js",
+    "file": "assets/client-Bl5CxH-1.js",
     "name": "client",
     "src": "virtual:#vinxi/handler/client",
     "isEntry": true,
@@ -56,7 +56,7 @@
       "src/routes/index.tsx?pick=default&pick=$css"
     ],
     "css": [
-      "assets/client-By6SG3CH.css"
+      "assets/client-CK-KnpkD.css"
     ]
   }
 }
