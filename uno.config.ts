@@ -29,11 +29,14 @@ export default defineConfig({
     }),
     presetAttributify(),
     presetWebFonts({
-      provider: "google",
+      provider: "fontshare",
       fonts: {
-        sans: "Be Vietnam Pro",
-        mono: "JetBrains Mono",
-        brand: "Urbanist"
+        sans: "Switzer",
+        mono: {
+          provider: "google",
+          name: "JetBrains Mono"
+        },
+        brand: "Satoshi"
       }
     }),
     presetIcons({

@@ -1,7 +1,6 @@
 import { A, useLocation } from "@solidjs/router";
 import { createSignal } from "solid-js";
-import lightLogo from "~/assets/light-logo.svg";
-import darkLogo from "~/assets/dark-logo.svg";
+import logo from "~/assets/logo.svg";
 
 function NavLinks(props: { isColumn?: boolean }) {
   const location = useLocation();
@@ -39,25 +38,10 @@ export default function Nav() {
       >
         <div flex="~ row" place="items-center" gap="4">
           <A href="/">
-            <img
-              w="32px"
-              h="32px"
-              src={lightLogo}
-              hidden
-              light="inline-block"
-              alt="Attoleap's white logo"
-            />
-            <img
-              w="32px"
-              h="32px"
-              src={darkLogo}
-              hidden
-              dark="inline-block"
-              alt="Attoleap's white logo"
-            />
+            <img w="32px" h="32px" src={logo} object="fit" alt="Attoleap's white logo" />
           </A>
-          <h1 font="brand 900" text="size-28px black dark:white" tracking-wide>
-            attoleap
+          <h1 font="brand bold" text="size-28px black dark:white">
+            AttoLeap
           </h1>
         </div>
         <div place="items-center" gap="4" font="sans 600" text="size-sm" uppercase hidden md="flex">
