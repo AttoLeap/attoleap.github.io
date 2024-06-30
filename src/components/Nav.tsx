@@ -47,13 +47,19 @@ export default function Nav() {
         <div place="items-center" gap="4" font="sans 600" text="size-sm" uppercase hidden md="flex">
           <NavLinks />
         </div>
-        <span
+        <div
+          border="1 rd-2 color-zinc-300 dark:color-zinc-700"
+          text="color-zinc-600 dark:color-zinc-400"
+          p="1"
           md="hidden"
-          class={menuOpen() ? "i-lucide-x" : "i-lucide-menu"}
-          text="size-3xl color-black dark:color-white"
-          transition="~ duration-200 ease-in-out"
-          onClick={toggleMenu}
-        />
+        >
+          <div
+            class={menuOpen() ? "i-lucide-x" : "i-lucide-menu"}
+            text="size-xl"
+            transition="~ duration-200 ease-in-out"
+            onClick={toggleMenu}
+          />
+        </div>
       </nav>
       <div
         class={menuOpen() ? "flex md:hidden" : "hidden"}
