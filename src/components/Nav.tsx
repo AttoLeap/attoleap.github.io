@@ -38,7 +38,7 @@ export default function Nav() {
       >
         <div flex="~ row" place="items-center" gap="4">
           <A href="/">
-            <img w="32px" h="32px" src={logo} object="fit" alt="Attoleap's white logo" />
+            <img w="32px" h="32px" src={logo} alt="Attoleap's white logo" />
           </A>
           <h1 font="brand bold" text="size-28px black dark:white">
             AttoLeap
@@ -66,12 +66,14 @@ export default function Nav() {
         absolute
         bg="white dark:black"
         font="600"
-        text="size-3xl"
-        p="16"
+        text="size-xl"
+        px="4"
+        py="2"
         w="full"
         h="[calc(100%_-_72px)]"
         transition="~ duration-200 ease-in-out"
         onClick={toggleMenu}
+        uppercase
       >
         <NavLinks isColumn />
       </div>
