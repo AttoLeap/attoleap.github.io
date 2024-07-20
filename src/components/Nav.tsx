@@ -35,8 +35,9 @@ export default function Nav() {
         justify="between"
         bg="white dark:black"
         p="4"
+        p-x="5%"
       >
-        <div flex="~ row" place="items-center" gap="4">
+        <div flex="~ row" place="items-center" gap="3">
           <A href="/">
             <img w="32px" h="32px" src={logo} alt="Attoleap's white logo" />
           </A>
@@ -44,7 +45,7 @@ export default function Nav() {
             AttoLeap
           </h1>
         </div>
-        <div place="items-center" gap="4" font="sans 600" text="size-sm" uppercase hidden md="flex">
+        <div place="items-center" gap="4" font="sans 600" text="size-md" uppercase hidden md="flex">
           <NavLinks />
         </div>
         <div
