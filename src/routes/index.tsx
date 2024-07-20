@@ -1,28 +1,31 @@
-import { Title } from "@solidjs/meta";
+import { MetaContext, MetaProvider, Title } from "@solidjs/meta";
+import { A } from "@solidjs/router";
+import Counter from "~/components/Counter";
 
 export default function Home() {
   return (
     <>
-      <Title>AttoLeap | Bridging the gaps between Hype and Reality.</Title>
-      <main
-        h="[calc(100vh_-_72px)]"
-        bg="white dark:black"
-        grid
-        my="auto"
-        place="items-center"
-        font="sans"
-        text="center"
-      >
-        <h1
-          font="bold"
-          class="dark:color-gray-100"
-          text="size-2xl color-gray-900 dark:color-gray-100"
-          md:w="70vw"
-          md:text="size-4xl"
-          md:line-height="6rem"
-        >
-          Bridging the gaps between Hype and Reality.
-        </h1>
+      <MetaProvider>
+        <Title>AttoLeap
+        </Title>
+      </MetaProvider>
+      <main class="text-center mx-auto text-gray-700 p-4">
+        <h1 class="max-6-xs text-6xl text-sky-700 font-thin uppercase my-16">Hello world!</h1>
+        <Counter />
+        <p class="mt-8">
+          Visit{" "}
+          <a href="https://solidjs.com" target="_blank" class="text-sky-600 hover:underline">
+            solidjs.com
+          </a>{" "}
+          to learn how to build Solid apps.
+        </p>
+        <p class="my-4">
+          <span>Home</span>
+          {" - "}
+          <A href="/about" class="text-sky-600 hover:underline">
+            About Page
+          </A>{" "}
+        </p>
       </main>
     </>
   );

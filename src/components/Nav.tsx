@@ -1,83 +1,19 @@
-import { A, useLocation } from "@solidjs/router";
-import { createSignal } from "solid-js";
-import logo from "~/assets/logo.svg";
-
-function NavLinks(props: { isColumn?: boolean }) {
-  const location = useLocation();
-  const active = (path: string) =>
-    path === location.pathname
-      ? "text-color-gray-900 dark:text-color-gray-100"
-      : "text-color-gray-600 dark:text-color-gray-400";
-
-  return (
-    <ul flex={`~ ${props.isColumn ? "col" : "row"}`} gap-4>
-      <li class={`${active("/")}`}>
-        <A href="/">Home</A>
-      </li>
-      <li class={`${active("/about")}`}>
-        <A href="/about">About</A>
-      </li>
-    </ul>
-  );
-}
+import { useLocation } from "@solidjs/router";
 
 export default function Nav() {
-  const [menuOpen, setMenuOpen] = createSignal(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen());
-
+  const location = useLocation();
+  const active = (path: string) =>
+    path == location.pathname ? "border-sky-600" : "border-transparent hover:border-sky-600";
   return (
-    <>
-      <nav
-        flex="~ row"
-        h="72px"
-        w="full"
-        place="items-center"
-        justify="between"
-        bg="white dark:black"
-        p="4"
-        p-x="5%"
-      >
-        <div flex="~ row" place="items-center" gap="3">
-          <A href="/">
-            <img w="32px" h="32px" src={logo} alt="Attoleap's white logo" />
-          </A>
-          <h1 font="brand bold" text="size-28px black dark:white">
-            AttoLeap
-          </h1>
-        </div>
-        <div place="items-center" gap="4" font="sans 600" text="size-md" uppercase hidden md="flex">
-          <NavLinks />
-        </div>
-        <div
-          border="1 rd-2 color-zinc-300 dark:color-zinc-700"
-          text="color-zinc-600 dark:color-zinc-400"
-          p="1"
-          md="hidden"
-        >
-          <div
-            class={menuOpen() ? "i-lucide-x" : "i-lucide-menu"}
-            text="size-xl"
-            transition="~ duration-200 ease-in-out"
-            onClick={toggleMenu}
-          />
-        </div>
-      </nav>
-      <div
-        class={menuOpen() ? "flex md:hidden" : "hidden"}
-        absolute
-        bg="white dark:black"
-        font="600"
-        text="size-xl"
-        px="4"
-        py="2"
-        w="full"
-        h="[calc(100%_-_72px)]"
-        transition="~ duration-200 ease-in-out"
-        onClick={toggleMenu}
-        uppercase
-      >
-        <NavLinks isColumn />
-      </div>
-    </>
+    <nav class="bg-sky-800">
+      <ul class="container flex items-center p-3 text-gray-200">
+        <li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-6`}>
+          <a href="/">Home</a>
+        </li>
+        <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-6`}>
+          <a href="/about">About</a>
+        </li>
+      </ul>
+    </nav>
   );
 }
